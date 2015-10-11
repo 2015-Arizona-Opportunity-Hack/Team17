@@ -1,6 +1,5 @@
-
 <ion-view>
-<ion-side-menus>
+<ion-side-menus  ng-controller="ContentController">
 
 
   <ion-side-menu-content>
@@ -9,13 +8,30 @@
         <label class="title"><img src="img/logo.png" height="100%"></img></label>
       </ion-header-bar>
       <ion-content>
-        <div id="clickedContent">
+        <div id="clickedContent" style="visibility:hidden">
+
+          <div class="list list-inset">
+            <label class="item item-input">Unit 1
+            </label>
+            <div class="list list-inset">
+              <button class="button button-block button-light" ng-click="playVideo('downloads/Who Is an Entreprenuer.mp4')" id="button1" >visionworksheet.docx
+              </button>
+            </div>
+          </div>
+          <div class="list list-inset">
+            <label class="item item-input">Unit 2</label>
+            <div class="list list-inset">
+              <button class="button button-block button-light" ng-click="playVideo('downloads/3.mp4')" id="button2">3.mp4
+              </button>
+            </div>
+          </div>
+
         </div>
       </ion-content>
     </ion-side-menu-content>
 
 
-    <ion-side-menu side="left" ng-controller="ContentController">
+    <ion-side-menu side="left">
       <ion-header-bar class="bar-dark">
         <h1 class="title">Welcome {{userdetails.username}}</h1>
       </ion-header-bar>
