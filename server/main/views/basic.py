@@ -5,9 +5,6 @@ from main.api_connectors.dropbox_connect import DropboxConnect
 basic = Blueprint('basic', __name__)
 CORS(basic)
 
-# @basic.route("/", methods=["GET", "POST"])
-# def index():
-# 	if request.method == "POST":
 
 @basic.route("/course_content")
 def get_course_content():

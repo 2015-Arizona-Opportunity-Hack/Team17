@@ -18,7 +18,6 @@ class DropboxConnect(object):
 		downloaded = '/tmp/'+file_name
 		out = open(downloaded, 'w+')
 		with self.client.get_file(file_path) as f:
-			print "*"*100
 			out.write(f.read())
 		return {"file_path": downloaded}
 
