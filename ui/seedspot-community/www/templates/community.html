@@ -1,0 +1,42 @@
+<ion-view>
+<ion-side-menus>
+
+
+  <ion-side-menu-content>
+      <ion-header-bar class="bar-dark">
+        <button class="button button-icon icon ion-navicon"></button>
+        <h1 class="title">Seed Spot Community</h1>
+      </ion-header-bar>
+      <ion-content>
+        <div id="clickedContent">
+        </div>
+      </ion-content>
+    </ion-side-menu-content>
+
+
+    <ion-side-menu side="left" ng-controller="ContentController">
+      <ion-header-bar class="bar-dark">
+        <h1 class="title">Welcome {{userdetails.username}}</h1>
+      </ion-header-bar>
+      <ion-content class="bar-dark">
+        <button class="button button-block button-light" id="home">
+          Home
+        </button>
+        <button class="button button-block button-light" id="forum">
+          Forum
+        </button>
+        <button class="button button-block button-light" ng-click="playVideo('img/test.MOV')">
+          Course Archive
+        </button>
+        <hr>
+        <button class="button button-block button-light" id="profile">
+          View Profile
+        </button>
+        <button class="button button-block button-light" id="logout">
+          Logout
+        </button>
+      </ion-content>
+    </ion-side-menu>
+
+  </ion-side-menus>
+</ion-view>

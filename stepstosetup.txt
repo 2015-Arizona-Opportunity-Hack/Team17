@@ -1,0 +1,9 @@
+Steps to setup
+
+1. sudo npm install -g cordova
+2. sudo npm install -g ionic
+3. ionic start todo blank
+4. ionic platform add ios
+5. ionic platform add android
+
+https://blog.nraboy.com/2014/09/install-android-cordova-ionic-framework-ubuntu/
