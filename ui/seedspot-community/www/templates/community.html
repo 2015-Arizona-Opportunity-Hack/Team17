@@ -8,7 +8,40 @@
         <label class="title"><img src="img/logo.png" height="100%"></img></label>
       </ion-header-bar>
       <ion-content>
-        <div id="clickedContent" style="visibility:hidden">
+        <div>
+        <div id="eventsandblogs" style="">
+
+
+          <div class="list list-inset">
+            <label class="item item-input">For you
+            </label>
+            <div class="list list-inset">
+              <label class="item item-input">DEMO DAY - December 10, 2015
+                <span style="float:right"><i class="icon icon-right ion-star"></i></span>
+              </label>
+              <label class="item item-input">Open House - October 21, 2015<i class="icon icon-right ion-star"></i>
+              </label>
+            </div>
+            <label class="item item-input">
+            </label>
+          </div>
+
+          <div class="list list-inset">
+            <label class="item item-input">Others
+            </label>
+            <div class="list list-inset">
+              <label class="item item-input ">Michael Seaver - OCTOBER 9, 2015
+              </label>
+              <label class="item item-input ">Vendor Fair - SEPTEMBER 21, 2015
+              </label>
+            </div>
+            <label class="item item-input">
+            </label>
+          </div>
+
+
+        </div>
+        <div id="clickedContent" style="display:none">
 
           <div class="list list-inset">
             <label class="item item-input">Unit 1
@@ -27,6 +60,27 @@
           </div>
 
         </div>
+
+        <div id="viewprofile" style="display:none">
+
+          <div class="list list-inset">
+            <label class="item item-input">What do you want to hear about?
+            </label>
+            <div class="list list-inset">
+              <ion-checkbox ng-checked="true">Animal Welfare</ion-checkbox>
+              <ion-checkbox >Economic Development</ion-checkbox>
+              <ion-checkbox ng-checked="true">Education</ion-checkbox>
+              <ion-checkbox >Children's Welfare</ion-checkbox>
+              <ion-checkbox >Civic Engagement</ion-checkbox>
+              <ion-checkbox >Health & Wellness</ion-checkbox>
+              <ion-checkbox >Job Accessibility & Equality</ion-checkbox>
+              <button class="button button-block button-calm">Save
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
       </ion-content>
     </ion-side-menu-content>
 
@@ -36,7 +90,7 @@
         <h1 class="title">Welcome {{userdetails.username}}</h1>
       </ion-header-bar>
       <ion-content class="bar-dark">
-        <button class="button button-block button-light" id="home">
+        <button class="button button-block button-light" ng-click="eventsandblogs()">
           Home
         </button>
         <button class="button button-block button-light" id="forum">
@@ -46,10 +100,10 @@
           Course Archive
         </button>
         <hr>
-        <button class="button button-block button-light" id="profile">
+        <button class="button button-block button-light" ng-click="viewprofile()">
           View Profile
         </button>
-        <button class="button button-block button-light" id="logout">
+        <button class="button button-block button-light" ng-click="logout()">
           Logout
         </button>
       </ion-content>

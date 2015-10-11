@@ -21,7 +21,7 @@ angular.module('starter.controllers', [])
         });
     }
 })
-.controller('ContentController', function($scope, Authorization, $ionicModal, $http) {
+.controller('ContentController', function($scope, Authorization, $ionicModal, $http, $state) {
 
 
   $scope.userdetails = Authorization.getAuthObject();
@@ -42,6 +42,20 @@ angular.module('starter.controllers', [])
   };
 
   $scope.clipSrc = '';
+
+
+  $scope.eventsandblogs = function() {
+    document.getElementById('eventsandblogs').style.display = 'block';
+    document.getElementById('viewprofile').style.display = 'none';
+    document.getElementById('clickedContent').style.display = 'none';
+  };
+
+
+  $scope.viewprofile = function() {
+    document.getElementById('eventsandblogs').style.display = 'none';
+    document.getElementById('viewprofile').style.display = 'block';
+    document.getElementById('clickedContent').style.display = 'none';
+  };
 
   $scope.courseContent = function() {
     $http({
@@ -70,7 +84,9 @@ angular.module('starter.controllers', [])
 
         //document.getElementById('clickedContent').innerHTML = (result);
         //angular.element(document.getElementById('clickedContent')).append(result);
-        document.getElementById('clickedContent').style.visibility = 'visible';
+        document.getElementById('eventsandblogs').style.display = 'none';
+        document.getElementById('viewprofile').style.display = 'none';
+        document.getElementById('clickedContent').style.display = 'block';
       }, function errorCallback(response) {
         console.log('Oh god!');
       });
@@ -93,4 +109,7 @@ angular.module('starter.controllers', [])
     $scope.showModal('templates/popover.html');
   }
 
+  $scope.logout = function() {
+    $state.go('login');
+  }
 });
