@@ -15,10 +15,8 @@ The Proposed Solution
 
 Frameworks Used
 ---------------
-- PhoneGap
+- Ionic.io
 - WordPress
-- Salesforce
-- Paypal
 
 Contributors
 ------------
