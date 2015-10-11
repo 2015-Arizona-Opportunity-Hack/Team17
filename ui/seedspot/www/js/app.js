@@ -17,3 +17,29 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+.controller('ContentController', function($scope, $ionicModal, $sce) {
+
+ $scope.showModal = function(templateUrl) {
+   $ionicModal.fromTemplateUrl(templateUrl, {
+     scope: $scope,
+     animation: 'slide-in-up'
+   }).then(function(modal) {
+     $scope.modal = modal;
+     $scope.modal.show();
+   });
+ }
+
+ $scope.closeModal = function() {
+   $scope.modal.hide();
+   $scope.modal.remove()
+ };
+
+ $scope.clipSrc = 'img/test.MOV';
+
+$scope.playVideo = function(source) {
+  console.log(source);
+  this.clipSrc = source;
+  $scope.showModal('templates/popover.html');
+}
+
+});
