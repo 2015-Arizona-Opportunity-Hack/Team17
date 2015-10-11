@@ -1,7 +1,9 @@
 from flask import Blueprint, request, jsonify
+from flask.ext.cors import CORS
 from main.api_connectors.dropbox_connect import DropboxConnect
 
 basic = Blueprint('basic', __name__)
+CORS(basic)
 
 # @basic.route("/", methods=["GET", "POST"])
 # def index():
