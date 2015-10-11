@@ -37,7 +37,6 @@ angular.module('starter', ['ionic'])
  $scope.clipSrc = 'img/test.MOV';
 
 $scope.playVideo = function(source) {
-  console.log(source);
   this.clipSrc = source;
   $scope.showModal('templates/popover.html');
 }
