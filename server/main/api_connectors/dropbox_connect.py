@@ -15,7 +15,7 @@ class DropboxConnect(object):
 
 	def get_file(self, file_path):
 		file_name = file_path.split("/")[-1]
-		downloaded = '/tmp/'+file_name
+		downloaded = '../ui/seedspot-community/www/downloads/'+file_name
 		out = open(downloaded, 'w+')
 		with self.client.get_file(file_path) as f:
 			out.write(f.read())
