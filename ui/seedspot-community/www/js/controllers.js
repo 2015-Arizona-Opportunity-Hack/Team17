@@ -21,7 +21,7 @@ angular.module('starter.controllers', [])
         });
     }
 })
-.controller('ContentController', function($scope, Authorization, $ionicModal) {
+.controller('ContentController', function($scope, Authorization, $ionicModal, $http) {
 
   //$scope.userdetails = function(){
   //  $scope.input = Authorization.getAuthObject();
@@ -46,8 +46,18 @@ angular.module('starter.controllers', [])
 
   $scope.clipSrc = 'img/test.MOV';
 
+  $scope.courseContent = function() {
+    $http({
+      method: 'GET',
+      url: 'http://127.0.0.1:5000/course_content?username='+$scope.userdetails.username
+    }).then(function successCallback(response) {
+        console.log(JSON.stringify(response));
+      }, function errorCallback(response) {
+        console.log('Oh god!');
+      });
+  };
+
   $scope.playVideo = function(source) {
-    console.log(this.userdetails);
     this.clipSrc = source;
     $scope.showModal('templates/popover.html');
   }

@@ -3,7 +3,7 @@
 The Problem
 -----------
 The [Seed Spot](http://www.seedspot.org/) organization Educates, Accelerates and Invests in entrepreneurs. They need an effective way to connect
-with their community and also provide some useful content to their alumni. 
+with their community and also provide some useful content to their alumni.
 
 The Proposed Solution
 ---------------------
@@ -16,6 +16,7 @@ The Proposed Solution
 Frameworks Used
 ---------------
 - Ionic.io
+- Angular.js
 - WordPress
 
 Contributors

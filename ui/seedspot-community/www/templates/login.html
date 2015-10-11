@@ -1,5 +1,19 @@
-<ion-view view-title="Login" name="login-view">
+<style>
+.scroll-content {
+ background: url('img/bg.jpg');
+-webkit-background-size: cover;
+-moz-background-size: cover;
+background-size: cover;
+}
+
+</style>
+
+<ion-view view-title="Login" name="login-view"  class="scroll-content ">
+  <ion-header-bar>
+    <img src="img/logo.png" height="100%" />
+  </ion-header-bar>
   <ion-content class="padding">
+
       <div class="list list-inset">
           <label class="item item-input">
               <input type="text" placeholder="Username" ng-model="data.username">
