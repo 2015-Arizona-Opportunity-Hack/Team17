@@ -22,7 +22,7 @@ Frameworks & Technologies Used
 - [Flask](flask.pocoo.org/)
 - [Dropbox API](https://www.dropbox.com/developers)
 - [WordPress](https://wordpress.org/)
-- [AlchemyTagger](https://wordpress.org/plugins/alchemytagger/) for WordPress
+- [AlchemyTagger](https://wordpress.org/plugins/alchemytagger/) for WordPress (Natural Language Processing)
 
 
 Contributors
